@@ -42,11 +42,11 @@ class Main extends Sprite
 			
 		#end
 			
-		#if !mobile
+		
 		fpsDisplay = new FPS(10, 3, 0xFFFFFF);
 		fpsDisplay.visible = false;
 		addChild(fpsDisplay);
-		#end
+		
 
 		if(video){
 		var ourSource:String = "assets/videos/DO NOT DELETE OR GAME WILL CRASH/dontDelete.webm";
