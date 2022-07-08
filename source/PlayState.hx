@@ -1055,7 +1055,9 @@ gayBoppers.push(dcameos);
 		iconP1.visible = false;
 		iconP2.visible = false;
 		scoreTxt.visible = false;
-
+                #if android
+	        addAndroidControls();
+	#end
 		// if (SONG.song == 'South')
 		// FlxG.camera.alpha = 0.7;
 		// UI_camera.zoom = 1;
@@ -1225,7 +1227,11 @@ gayBoppers.push(dcameos);
 	var perfectMode:Bool = false;
 
 	function startCountdown():Void
-	{
+	{   
+		#if android
+	        androidc.visible = true;
+	        #end
+			
 		inCutscene = false;
 
 		healthBar.visible = true;
