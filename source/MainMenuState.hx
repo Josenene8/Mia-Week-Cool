@@ -226,7 +226,9 @@ class MainMenuState extends MusicBeatState
 		
 		//Offset Stuff
 		Config.reload();
-
+                #if android
+		addVirtualPad(UP_DOWN, A_B);
+		#end
 		super.create();
 	}
 
@@ -239,8 +241,8 @@ class MainMenuState extends MusicBeatState
 		{
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
 		}
-scrollTxt.x -= 3 * 60 / Lib.current.stage.frameRate;
-if(scrollTxt.x < -1280) scrollTxt.x = 0;
+                        scrollTxt.x -= 3 * 60 / Lib.current.stage.frameRate;
+                        if(scrollTxt.x < -1280) scrollTxt.x = 0;
 		if (!selectedSomethin)
 		{
 			if (controls.UP_P)
